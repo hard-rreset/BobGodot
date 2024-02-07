@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmfar1uqexoxa"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_evlb3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6vcy2"]
+load_path = "res://.godot/imported/bob.png-ef7865ee39525c6383b3411bb2ee0e8e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi74k"]
+size = Vector2(38, 61.5)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1c2bj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmt26"]
+size = Vector2(320, 128)
+
+[node name="testZone" type="Node2D"]
+
+[node name="PlayerWithRigidBody" type="Node" parent="."]
+
+[node name="PlayerBody" type="RigidBody2D" parent="PlayerWithRigidBody"]
+position = Vector2(224, 96)
+lock_rotation = true
+script = ExtResource("1_evlb3")
+
+[node name="PlayerSprite" type="Sprite2D" parent="PlayerWithRigidBody/PlayerBody"]
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_6vcy2")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerWithRigidBody/PlayerBody"]
+position = Vector2(-1, 0.25)
+shape = SubResource("RectangleShape2D_hi74k")
+debug_color = Color(0.458824, 0.454902, 0.984314, 0.419608)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(2, -341)
+scale = Vector2(2.60625, 1)
+texture = SubResource("PlaceholderTexture2D_1c2bj")
+polygon = PackedVector2Array(0, 640, 320, 640, 320, 768, 0, 768)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Polygon2D"]
+visible = false
+scale = Vector2(0.5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Polygon2D/StaticBody2D"]
+position = Vector2(320, 704)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_mmt26")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

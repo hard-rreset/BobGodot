@@ -1,0 +1,7 @@
+res://levels/test_zone/test_zone.tscn
+res://characters/player/player.tscn
+res://scripts/player/playerMovement.gd
+res://levels/test_zone/PlayerBody.gd
+res://scripts/player/player.gd
+res://scripts/items/item.gd
+res://levels/test_zone/PlayerMovement.gd

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://u7d0u8doepx3"]
+
+[ext_resource type="Script" path="res://scripts/player/playerMovement.gd" id="1_jfjpr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_osadc"]
+load_path = "res://.godot/imported/bob.png-ef7865ee39525c6383b3411bb2ee0e8e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slgt1"]
+size = Vector2(38, 61)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_jfjpr")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_osadc")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_slgt1")
