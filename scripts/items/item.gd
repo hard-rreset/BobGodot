@@ -1,18 +1,16 @@
 class_name Item
+extends Node
 #ItemClass
 
-var name : String = "Default_Item"
+var item_name : String = "Default_Item"
 var description : String = "This is an item with no description."
+var type:String = "Test"
 
+func set_item_name(new_item_name):
+	item_name = new_item_name
 
-func _init(name, description):
-	self.name = name
-	self.description = description
-
-
-func get_name():
-	return name
-
+func get_item_name():
+	return item_name
 
 func get_description():
 	return description
