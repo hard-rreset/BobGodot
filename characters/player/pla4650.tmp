@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1egvlh1hoc53"]
+[gd_scene load_steps=5 format=3 uid="uid://d1egvlh1hoc53"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_8xlyj"]
 
@@ -7,6 +7,9 @@ load_path = "res://.godot/imported/bob.png-ef7865ee39525c6383b3411bb2ee0e8e.ctex
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm5cq"]
 size = Vector2(38, 61.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hrik5"]
+radius = 19.0263
 
 [node name="PlayerBody" type="RigidBody2D"]
 lock_rotation = true
@@ -22,7 +25,9 @@ position = Vector2(-1, 0.25)
 shape = SubResource("RectangleShape2D_sm5cq")
 debug_color = Color(0.458824, 0.454902, 0.984314, 0.419608)
 
-[node name="GroundCast" type="RayCast2D" parent="."]
-position = Vector2(0, 30)
-target_position = Vector2(0, 15)
-collide_with_areas = true
+[node name="GroundDetector" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="GroundDetector"]
+position = Vector2(-1, 21)
+shape = SubResource("CircleShape2D_hrik5")
+disabled = true
