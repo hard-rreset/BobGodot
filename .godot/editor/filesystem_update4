@@ -1,8 +1,7 @@
 res://levels/test_zone/test_zone.tscn
-res://scripts/actor.gd
-res://scripts/player/player.gd
-res://characters/player/player.tscn
-res://scripts/enemies/enemy.gd
 res://items/test_item/test_item.tscn
-res://scripts/items/item.gd
+res://characters/player/player.tscn
+res://scripts/player/player.gd
+res://scripts/actor.gd
 res://scripts/items/white/rock.gd
+res://scripts/items/item.gd

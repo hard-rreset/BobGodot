@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epmmi"]
 size = Vector2(32, 32)
 
-[node name="TestItem" type="RigidBody2D"]
+[node name="TestItem" type="Area2D"]
 script = ExtResource("1_p03dn")
 
 [node name="PhItemBox" type="Sprite2D" parent="."]

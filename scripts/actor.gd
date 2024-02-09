@@ -2,7 +2,7 @@ class_name Actor
 extends RigidBody2D
 
 const SPEED:int = 1500
-const JUMP_FORCE:int = 3000
+const JUMP_FORCE:int = 4500
 
 var max_health:int = 100
 var health:int = max_health

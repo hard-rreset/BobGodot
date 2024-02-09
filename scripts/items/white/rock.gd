@@ -2,9 +2,9 @@ extends Item
 
 @onready var shape = $ItemHitbox
 
-var health = 2
-var speed = 200
-var damage = 20
+@export var health = 2
+@export var speed = 200
+@export var damage = 20
 
 func _ready():
 	item_name = "rock"
@@ -12,3 +12,7 @@ func _ready():
 	type = "mixed"
 
 
+
+
+func _on_player_body_entered(body):
+		print("hit")
