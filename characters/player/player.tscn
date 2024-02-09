@@ -1,28 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp8uivigeqpr0"]
+[gd_scene load_steps=4 format=3 uid="uid://dug2e8l67mfr"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_cvvnj"]
 [ext_resource type="Texture2D" uid="uid://cj6fuwpskg81w" path="res://characters/player/bob.png" id="2_oxgxd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfdio"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n157y"]
 size = Vector2(38, 61)
 
-[node name="Player" type="RigidBody2D"]
-lock_rotation = true
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_cvvnj")
 
-[node name="PSprite" type="Sprite2D" parent="." groups=["Player"]]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_oxgxd")
 flip_h = true
 
-[node name="PCollision" type="CollisionShape2D" parent="." groups=["Player"]]
+[node name="HitBox" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0.5)
-shape = SubResource("RectangleShape2D_mfdio")
+shape = SubResource("RectangleShape2D_n157y")
 
-[node name="GroundCast" type="RayCast2D" parent="." groups=["Player"]]
-position = Vector2(0, 3)
-target_position = Vector2(0, 34)
-collide_with_areas = true
-
-[node name="Camera2D" type="Camera2D" parent="." groups=["Player"]]
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)

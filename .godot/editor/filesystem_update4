@@ -5,3 +5,5 @@ res://scripts/player/player.gd
 res://scripts/actor.gd
 res://scripts/items/white/rock.gd
 res://scripts/items/item.gd
+res://scripts/player/rigidbody_player.gd
+res://levels/test_zone/TestCollider.gd
