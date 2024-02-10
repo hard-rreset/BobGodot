@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dug2e8l67mfr"]
+[gd_scene load_steps=18 format=3 uid="uid://dug2e8l67mfr"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_cvvnj"]
 [ext_resource type="Texture2D" uid="uid://g2th27b7d8gw" path="res://characters/player/animations/idle/bobv3_idle1.png" id="2_7hkik"]
@@ -10,13 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://b7d3nqmhvx1xm" path="res://characters/player/animations/walk/bobv3_walk3.png" id="5_oui15"]
 [ext_resource type="Texture2D" uid="uid://b5qjuovry1oim" path="res://characters/player/animations/idle/bobv3_idle5.png" id="6_6gmhu"]
 [ext_resource type="Texture2D" uid="uid://dcrailkm6dyre" path="res://characters/player/animations/walk/bobv3_walk4.png" id="6_je8ii"]
-[ext_resource type="Texture2D" uid="uid://hl3w6knpt232" path="res://characters/player/animations/jump/bobv3_jump1.png" id="7_hd6me"]
 [ext_resource type="Texture2D" uid="uid://c36k3ffbnn1p0" path="res://characters/player/animations/walk/bobv3_walk5.png" id="7_vuac0"]
 [ext_resource type="Texture2D" uid="uid://c1wbfjo5mr181" path="res://characters/player/animations/walk/bobv3_walk6.png" id="8_7rlue"]
 [ext_resource type="Texture2D" uid="uid://ds3vxmmhgy5gk" path="res://characters/player/animations/jump/bobv3_jump2.png" id="8_vd5lf"]
 [ext_resource type="Texture2D" uid="uid://dfbuquyql16qi" path="res://characters/player/animations/jump/bobv3_jump3.png" id="9_1lmvn"]
 [ext_resource type="Script" path="res://characters/player/player_animations.gd" id="9_x8me6"]
-[ext_resource type="Texture2D" uid="uid://c2c0ga5u7xlui" path="res://characters/player/animations/jump/bobv3_jump4.png" id="10_jfkqo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h7naj"]
 animations = [{
@@ -45,17 +43,11 @@ animations = [{
 "texture": ExtResource("8_vd5lf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_hd6me")
-}, {
-"duration": 1.0,
 "texture": ExtResource("9_1lmvn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_jfkqo")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 10.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -84,16 +76,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n157y"]
 size = Vector2(32, 44)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_cvvnj")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_h7naj")
-animation = &"jump"
-frame = 2
-frame_progress = 0.74314
+frame_progress = 0.982189
 script = ExtResource("9_x8me6")
 
 [node name="HitBox" type="CollisionShape2D" parent="."]

@@ -1,7 +1,10 @@
-res://scripts/player
-res://scripts/enemies/test_box
-res://objects/test_level/level_up
+res://items/umbrella
+res://ui/level_up
 res://levels/test_zone
+res://scripts/enemies/test_box
+res://characters/enemies/test_box
+res://scripts/player
+res://objects/test_level/level_up
 res://characters/player
 res://scripts/items/white
 res://scripts/items

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://1ma3q1f8jh6w"]
+
+[ext_resource type="Script" path="res://ui/level_up/rainbowtext.gd" id="1_as22d"]
+
+[node name="LevelUpText" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -48.0
+offset_top = -55.0
+offset_right = 48.0
+offset_bottom = -31.0
+text = "Level UP +1"
+scroll_active = false
+script = ExtResource("1_as22d")

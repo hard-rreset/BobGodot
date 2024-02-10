@@ -1,17 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh36bg2fjghsd"]
+[remap]
 
-[ext_resource type="Script" path="res://scripts/enemies/test_box/TestBox.gd" id="1_djo3j"]
-[ext_resource type="Texture2D" uid="uid://c1kkswdu8l38x" path="res://characters/enemies/test_box/ph_enemy_box.png" id="2_vwhky"]
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cgyg1utyknfds"
+path="res://.godot/imported/test_zone_ground_red-Sheet.png-e963a176661ddcaad018ed2139abd906.ctex"
+metadata={
+"vram_texture": false
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gluxk"]
-size = Vector2(32, 32)
+[deps]
 
-[node name="TestBox" type="CharacterBody2D" groups=["Enemy"]]
-script = ExtResource("1_djo3j")
+source_file="res://levels/test_zone/test_zone_ground_red-Sheet.png"
+dest_files=["res://.godot/imported/test_zone_ground_red-Sheet.png-e963a176661ddcaad018ed2139abd906.ctex"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_gluxk")
+[params]
 
-[node name="PhEnemyBox" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_vwhky")
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+[editor_metadata]
+
+tile_snap_option=0
+tile_snap_subdiv=4.0
+use_advanced_connections=false
+executable_path="E:/SteamLibrary/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe"
+tile_source_

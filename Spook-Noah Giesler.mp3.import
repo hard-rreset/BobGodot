@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbv5on3log27m"
+path="res://.godot/imported/Spook-Noah Giesler.mp3-5b9590f7bd5e31eb0bee96319060979f.mp3str"
+
+[deps]
+
+source_file="res://Spook-Noah Giesler.mp3"
+dest_files=["res://.godot/imported/Spook-Noah Giesler.mp3-5b9590f7bd5e31eb0bee96319060979f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

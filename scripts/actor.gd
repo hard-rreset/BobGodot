@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export_group("Movement")
 @export var move_speed : float = 250.0
-@export var jump_force : float = 350.0
+@export var jump_force : float = 250.0
 @export var gravity : float = 500.0
 
 @export_group("Stats")
@@ -16,12 +16,19 @@ extends CharacterBody2D
 @export var damage : int = base_damage 
 
 @export var items = []
+@export var qty_items = []
 
 @export_group("Toggles")
 @export var can_move : bool = true
 
 @onready var sprite = $Sprite 
 
+@onready var level_up_label = preload("res://ui/level_up/level_up_label.tscn")
+
+
+func cycle_items():
+	for item in items:
+		item.add_visuals(self,item.visuals)
 
 func update_stats():
 	move_speed += (0.30*move_speed/100) * level 
@@ -52,10 +59,23 @@ func heal_up(heal):
 		health = max_health
 	else:
 		health += heal	
-		
-		
+
+
 func level_up(levels_to_up = 1):
+	var level_text = level_up_label.instantiate()
+	add_child(level_text)
 	level += levels_to_up
 	update_stats()
 
-	
+func add_item(item):
+	if items.size() > 0 :
+		for _item in items:
+			if _item.item_name == item.item_name :
+				qty_items[items.find(item.get_class())] += 1
+			else:
+				items.append(item)
+				qty_items.append(1)
+	else:
+		items.append(item)
+		qty_items.append(1)
+	cycle_items()
