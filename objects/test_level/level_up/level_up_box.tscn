@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgf0ybqowkh74"]
+
+[ext_resource type="Script" path="res://scripts/objects/test_zone/level_up_box.gd" id="1_gmxfc"]
+[ext_resource type="Texture2D" uid="uid://ddgyapnfdjx1o" path="res://objects/test_level/level_up/level_up_box.png" id="2_lom8t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdaej"]
+size = Vector2(64, 64)
+
+[node name="LevelUpBox" type="Area2D"]
+script = ExtResource("1_gmxfc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bdaej")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_lom8t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

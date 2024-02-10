@@ -1,7 +1,9 @@
-res://characters/player
 res://scripts/player
+res://scripts/enemies/test_box
+res://objects/test_level/level_up
+res://levels/test_zone
+res://characters/player
 res://scripts/items/white
 res://scripts/items
-res://levels/test_zone
 res://items/test_item
 F:/Godot/BobGodot/scripts/player
