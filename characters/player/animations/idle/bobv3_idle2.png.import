@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lhvnn8fv3qch"
-path="res://.godot/imported/walk_bob4.png-38cb2237622b4a26e844e88076cfe341.ctex"
+uid="uid://bbyk7gd3x6hqh"
+path="res://.godot/imported/bobv3_idle2.png-924e51fc092c943d56441aa80738ef4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/player/animations/walk/walk_bob4.png"
-dest_files=["res://.godot/imported/walk_bob4.png-38cb2237622b4a26e844e88076cfe341.ctex"]
+source_file="res://characters/player/animations/idle/bobv3_idle2.png"
+dest_files=["res://.godot/imported/bobv3_idle2.png-924e51fc092c943d56441aa80738ef4a.ctex"]
 
 [params]
 

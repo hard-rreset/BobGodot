@@ -123,7 +123,7 @@ sources/0 = SubResource("TileSetAtlasSource_neljt")
 [node name="testZone" type="Node2D"]
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_s7kf1")]
-position = Vector2(2, 300)
+position = Vector2(0, 240)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

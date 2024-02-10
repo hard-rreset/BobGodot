@@ -1,3 +1,4 @@
-res://levels/test_zone/test_zone.tscn
+res://characters/player/player.tscn
 res://scripts/player/player.gd
-res://scripts/actor.gd
+res://levels/test_zone/test_zone.tscn
+res://characters/player/player_animations.gd
