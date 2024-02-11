@@ -68,14 +68,18 @@ func level_up(levels_to_up = 1):
 	update_stats()
 
 func add_item(item):
-	if items.size() > 0 :
+	var item_names = []
+	if items.size() > 0:	
 		for _item in items:
-			if _item.item_name == item.item_name :
-				qty_items[items.find(item.get_class())] += 1
-			else:
-				items.append(item)
-				qty_items.append(1)
-	else:
+			var _item_name = _item.item_name
+			if _item_name not in item_names:
+				item_names.append(_item_name)
+		if item.item_name in item_names:
+			qty_items[item_names.find(item.item_name)] += 1
+		else:
+			items.append(item)
+			qty_items.append(1)
+	if items.size() <= 0:
 		items.append(item)
 		qty_items.append(1)
 	cycle_items()

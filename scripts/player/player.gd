@@ -1,11 +1,6 @@
 class_name Player
 extends Actor
 
-func _ready():
-	add_item(Umbrella.new())
-	add_item(Umbrella.new())
-	print(items)
-	print(qty_items)
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta

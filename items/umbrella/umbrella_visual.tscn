@@ -69,4 +69,6 @@ texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_52ex0")
 animation = &"walk"
+frame = 4
+frame_progress = 0.689491
 script = ExtResource("12_c36so")

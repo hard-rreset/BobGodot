@@ -1,14 +1,6 @@
 res://characters/player/player.tscn
 res://scripts/player/player.gd
-res://scripts/enemies/test_box/TestBox.gd
 res://levels/test_zone/test_zone.tscn
-res://objects/test_level/level_up/level_up_box.tscn
-res://ui/level_up/level_up_label.tscn
-res://scripts/actor.gd
-res://ui/level_up/rainbowtext.gd
-res://characters/player/player_animations.gd
-res://scripts/objects/test_zone/level_up_box.gd
 res://items/umbrella/umbrella_visual.tscn
-res://scripts/items/umbrella/umbrella_visual.gd
-res://scripts/items/item.gd
-res://scripts/items/umbrella/umbrella.gd
+res://items/wig/pink_wig_visual.tscn
+res://scripts/actor.gd

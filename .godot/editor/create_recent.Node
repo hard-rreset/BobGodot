@@ -1,11 +1,11 @@
-AnimationPlayer
+TileMap
 AnimatedSprite2D
+AnimationPlayer
 Sprite2D
 Node
 RichTextLabel
 Label
 TextEdit
-TileMap
 CollisionShape2D
 Area2D
 GPUParticles2D
