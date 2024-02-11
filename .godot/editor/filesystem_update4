@@ -1,6 +1,0 @@
-res://characters/player/player.tscn
-res://scripts/player/player.gd
-res://levels/test_zone/test_zone.tscn
-res://items/umbrella/umbrella_visual.tscn
-res://items/wig/pink_wig_visual.tscn
-res://scripts/actor.gd
