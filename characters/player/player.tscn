@@ -84,7 +84,8 @@ z_index = -3
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_h7naj")
-frame_progress = 0.982189
+animation = &"jump"
+frame_progress = 0.762908
 script = ExtResource("9_x8me6")
 
 [node name="HitBox" type="CollisionShape2D" parent="."]

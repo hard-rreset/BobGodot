@@ -19,7 +19,7 @@ func get_item_name():
 func get_description():
 	return description
 
-func add_visuals(parent,visuals):
+func add_visuals(parent):
 	parent.add_child(visuals)
 	
 func get_visuals():

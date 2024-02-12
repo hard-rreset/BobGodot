@@ -1,6 +1,10 @@
 class_name Player
 extends Actor
 
+func _ready():
+	add_item(PinkWig.new())
+	add_item(Umbrella.new())
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -32,3 +36,5 @@ func _physics_process(delta):
 					item.get_visuals().play_idle_animation(move_speed)
 			if velocity.y != 0:
 				sprite.play_jump_animation()	
+				for item in items:
+					item.get_visuals().play_jump_animation()

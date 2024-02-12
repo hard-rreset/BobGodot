@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://byxlck7b1kdm7"]
+[gd_scene load_steps=17 format=3 uid="uid://byxlck7b1kdm7"]
 
 [ext_resource type="Texture2D" uid="uid://llx4m7e8jwp4" path="res://items/umbrella/animations/idle/umbrella_idle1.png" id="1_st6qq"]
 [ext_resource type="Texture2D" uid="uid://cl5jmney5fhep" path="res://items/umbrella/animations/idle/umbrella_idle2.png" id="2_jkqlr"]
@@ -6,8 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://klqv3oeidw8" path="res://items/umbrella/animations/idle/umbrella_idle4.png" id="4_y13wh"]
 [ext_resource type="Texture2D" uid="uid://d4ko36xc5yovg" path="res://items/umbrella/animations/idle/umbrella_idle5.png" id="5_2v8lv"]
 [ext_resource type="Texture2D" uid="uid://b3fgins44xtaw" path="res://items/umbrella/animations/walk/umbrella_walk1.png" id="6_bt7av"]
+[ext_resource type="Texture2D" uid="uid://d4hnnd4c1qme3" path="res://items/umbrella/animations/jump/umbrella_jump1.png" id="6_r8v11"]
 [ext_resource type="Texture2D" uid="uid://cwj8hespfhq1m" path="res://items/umbrella/animations/walk/umbrella_walk2.png" id="7_fmht0"]
+[ext_resource type="Texture2D" uid="uid://dk85efsu5375r" path="res://items/umbrella/animations/jump/umbrella_jump2.png" id="7_fruvn"]
 [ext_resource type="Texture2D" uid="uid://cna5g4ltdx3h1" path="res://items/umbrella/animations/walk/umbrella_walk3.png" id="8_yiv7h"]
+[ext_resource type="Texture2D" uid="uid://cync7wwhprmfg" path="res://items/umbrella/animations/jump/umbrella_jump4.png" id="9_7ngqv"]
 [ext_resource type="Texture2D" uid="uid://dljjfjo7t2aky" path="res://items/umbrella/animations/walk/umbrella_walk4.png" id="9_63snk"]
 [ext_resource type="Texture2D" uid="uid://c2yj687lcrmg0" path="res://items/umbrella/animations/walk/umbrella_walk5.png" id="10_fpy66"]
 [ext_resource type="Texture2D" uid="uid://838eecpafk4a" path="res://items/umbrella/animations/walk/umbrella_walk6.png" id="11_s1h6r"]
@@ -35,10 +38,22 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_r8v11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fruvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7ngqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fruvn")
+}],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -68,7 +83,6 @@ animations = [{
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_52ex0")
-animation = &"walk"
-frame = 4
-frame_progress = 0.689491
+animation = &"jump"
+frame_progress = 0.168217
 script = ExtResource("12_c36so")

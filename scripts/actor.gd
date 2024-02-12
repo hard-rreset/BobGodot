@@ -28,7 +28,7 @@ extends CharacterBody2D
 
 func cycle_items():
 	for item in items:
-		item.add_visuals(self,item.visuals)
+		item.add_visuals(self)
 
 func update_stats():
 	move_speed += (0.30*move_speed/100) * level 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cj7edexi6dm71"]
+[gd_scene load_steps=16 format=3 uid="uid://cj7edexi6dm71"]
 
 [ext_resource type="Texture2D" uid="uid://c0xwlxc4wyj50" path="res://items/wig/animations/idle/wig_idle1.png" id="1_coy7n"]
 [ext_resource type="Texture2D" uid="uid://ct7m64q1srxei" path="res://items/wig/animations/idle/wig_idle2.png" id="2_2gqth"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://u12gdyysqopf" path="res://items/wig/animations/idle/wig_idle4.png" id="4_cw4d3"]
 [ext_resource type="Texture2D" uid="uid://dgc4mfsws6v1f" path="res://items/wig/animations/idle/wig_idle5.png" id="5_kj05k"]
 [ext_resource type="Texture2D" uid="uid://8p4pcvgybn7m" path="res://items/wig/animations/walking/pink_wig_walk1.png" id="6_qga33"]
+[ext_resource type="Texture2D" uid="uid://0s7l71hxbvy" path="res://items/wig/animations/jump/pink_wig_jump2.png" id="7_hjnr1"]
 [ext_resource type="Texture2D" uid="uid://x53tvv2ico8r" path="res://items/wig/animations/walking/pink_wig_walk2.png" id="7_p13wo"]
+[ext_resource type="Texture2D" uid="uid://b8wq54m16q1ap" path="res://items/wig/animations/jump/pink_wig_jump3.png" id="8_b1ksn"]
 [ext_resource type="Texture2D" uid="uid://bll1kimsgti8a" path="res://items/wig/animations/walking/pink_wig_walk3.png" id="8_vx6ov"]
 [ext_resource type="Texture2D" uid="uid://b1k44d7uuwvco" path="res://items/wig/animations/walking/pink_wig_walk4.png" id="9_non8o"]
 [ext_resource type="Texture2D" uid="uid://c4owliaqww16j" path="res://items/wig/animations/walking/pink_wig_walk5.png" id="10_sml2a"]
@@ -37,6 +39,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("7_hjnr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b1ksn")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_qga33")
 }, {
 "duration": 1.0,
@@ -64,5 +77,6 @@ z_index = -1
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3cmdn")
-animation = &"walk"
+animation = &"jump"
+frame_progress = 0.578091
 script = ExtResource("12_6w2vp")
