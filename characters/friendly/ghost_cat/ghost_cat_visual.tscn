@@ -1,0 +1,100 @@
+[gd_scene load_steps=17 format=3 uid="uid://krk4jgq844wn"]
+
+[ext_resource type="Texture2D" uid="uid://doq8xo7fn34g3" path="res://characters/friendly/ghost_cat/animations/idle/ghost_cast_idle1.png" id="1_5e7t8"]
+[ext_resource type="Script" path="res://scripts/characters/friendly/ghost_cat/ghost_cat_visual.gd" id="1_s1jd2"]
+[ext_resource type="Texture2D" uid="uid://bw8hktojsqqxh" path="res://characters/friendly/ghost_cat/animations/idle/ghost_cast_idle2.png" id="2_j8vtb"]
+[ext_resource type="Texture2D" uid="uid://ckp6hhn5vadag" path="res://characters/friendly/ghost_cat/animations/idle/ghost_cast_idle3.png" id="3_ttqdh"]
+[ext_resource type="Texture2D" uid="uid://jslpyq30y4uj" path="res://characters/friendly/ghost_cat/animations/heal/ghost_cast_heal1.png" id="4_xovfo"]
+[ext_resource type="Texture2D" uid="uid://5dvyr8avqgko" path="res://characters/friendly/ghost_cat/animations/heal/ghost_cast_heal2.png" id="5_617hb"]
+[ext_resource type="Texture2D" uid="uid://4yknulqwmias" path="res://characters/friendly/ghost_cat/animations/heal/ghost_cast_heal3.png" id="6_w5own"]
+[ext_resource type="Texture2D" uid="uid://d0uyv1s0bcrkc" path="res://characters/friendly/ghost_cat/animations/heal/ghost_cast_heal4.png" id="7_8x0fs"]
+[ext_resource type="Texture2D" uid="uid://5ojigacpjk6p" path="res://characters/friendly/ghost_cat/animations/heal/ghost_cast_heal5.png" id="8_rr5a1"]
+[ext_resource type="Texture2D" uid="uid://dtafdtjeh7bhs" path="res://characters/friendly/ghost_cat/animations/heal/ghost_cast_heal6.png" id="9_jd0bg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77feu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5e7t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j8vtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ttqdh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xovfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_617hb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w5own")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8x0fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rr5a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jd0bg")
+}],
+"loop": true,
+"name": &"heal",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_56rx8"]
+radius = 16.0312
+
+[sub_resource type="Gradient" id="Gradient_hvv5y"]
+offsets = PackedFloat32Array(0.00869565, 0.721739)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_01iy8"]
+gradient = SubResource("Gradient_hvv5y")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_24be3"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wom25"]
+
+[node name="GhostCatBody" type="CharacterBody2D"]
+motion_mode = 1
+floor_stop_on_slope = false
+floor_block_on_wall = false
+script = ExtResource("1_s1jd2")
+
+[node name="GhostCatVisual" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.623529)
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_77feu")
+animation = &"heal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -4
+shape = SubResource("CircleShape2D_56rx8")
+disabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(1.02929, 0.984375)
+color = Color(0.996078, 0.333333, 0.788235, 1)
+range_z_min = -256
+range_z_max = 256
+texture = SubResource("GradientTexture2D_01iy8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_24be3")
+texture = SubResource("PlaceholderTexture2D_wom25")
+trail_enabled = true
