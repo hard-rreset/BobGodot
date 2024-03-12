@@ -77,6 +77,5 @@ z_index = -1
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3cmdn")
-animation = &"jump"
-frame_progress = 0.578091
+animation = &"walk"
 script = ExtResource("12_6w2vp")

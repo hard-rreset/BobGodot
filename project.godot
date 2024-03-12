@@ -15,6 +15,18 @@ run/main_scene="res://levels/test_zone/test_zone.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://items/": "teal",
+"res://objects/": "pink",
+"res://scripts/characters/enemies/": "red",
+"res://scripts/characters/player/": "yellow",
+"res://scripts/items/": "teal",
+"res://scripts/objects/": "pink",
+"res://scripts/ui/": "purple"
+}
+
 [input]
 
 move_left={
@@ -54,5 +66,4 @@ disabled={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
