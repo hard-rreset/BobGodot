@@ -3,6 +3,7 @@ extends Actor
 
 func _ready():
 	add_item(PinkWig.new())
+	add_item(GhostCat.new())
 	
 func _physics_process(delta):
 	if not is_on_floor():

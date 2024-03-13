@@ -17,6 +17,17 @@ var ran_rotation_rgt = 0
 
 
 var _sprite_angle
+var flip_h :bool;
+
+# I should've coded this better, need to rework this later dang ghost cat. 
+func play_jump_animation():
+	return null
+
+func play_idle_animation(move_speed):
+	return null
+
+func play_walk_animation(move_speed):
+	return null
 
 func _physics_process(delta):
 		
